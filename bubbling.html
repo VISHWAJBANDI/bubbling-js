@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Nested Divs</title>
+    <style>
+        .grand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid black;
+            padding: 50px;
+        }
+
+        .parent-1, .parent-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+            padding: 50px;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="grand">
+        <div class="parent-1">
+            <div class="parent-2">
+                <div class="child"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./bubbling.js"></script>
+</body>
+</html>
